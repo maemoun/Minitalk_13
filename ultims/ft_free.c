@@ -6,14 +6,14 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 12:12:56 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/03/07 12:13:00 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/03/08 11:27:39 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ultims.h"
 
-void	ft_free(char **s)
+void	ft_free(char *s)
 {
-	free(*s);
-	*s = NULL;
+	free(s);
+	s = NULL;
 }

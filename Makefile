@@ -22,6 +22,7 @@ CL_BONUS_OBJ = $(CL_BONUS:.c=.o)
 
 all: $(SERVER) $(CLIENT)
 
+bonus : $(SERVER_BONUS) $(CLIENT_BONUS)
 $(UTILS):
 		$(MAKE) -C ./ultims
 $(SERVER): $(SV_OBJ) $(UTILS)

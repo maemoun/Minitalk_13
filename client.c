@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 12:07:09 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/03/07 12:15:39 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/03/09 12:43:05 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	send_bit(char c, int pid)
 		else
 			kill(pid, SIGUSR2);
 		i--;
-		usleep(500);
+		usleep(300);
 	}
 }
 

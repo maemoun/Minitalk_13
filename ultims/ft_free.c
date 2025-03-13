@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 12:12:56 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/03/08 11:27:39 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/03/09 12:40:45 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_free(char *s)
 {
-	free(s);
+	if (s)
+		free(s);
 	s = NULL;
 }

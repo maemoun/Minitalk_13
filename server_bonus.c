@@ -6,7 +6,7 @@
 /*   By: maeskhai <maeskhai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 17:01:08 by maeskhai          #+#    #+#             */
-/*   Updated: 2025/03/08 11:27:27 by maeskhai         ###   ########.fr       */
+/*   Updated: 2025/03/09 12:42:38 by maeskhai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@ t_list s = { 0, 31, 0, NULL, 0, 0, 0};
 void	ft_variables(void)
 {
 	s.c = 0;
+	s.j = 31;
 	s.i = 0;
 	s.len = 0;
 	s.index = 0;
-	s.c = 31;
+	s.c = 0;
 	ft_free(s.str);
 	s.str = NULL;
 }
@@ -60,8 +61,6 @@ void	handler(int signum, siginfo_t *info, void *context)
             if (s.index == s.len)
             {
                 ft_printf("%s\n", s.str);
-                ft_free(s.str);
-                s.str = NULL;
                 s.len = 0;
                 s.j = 31;
                 s.index = 0;

@@ -23,6 +23,7 @@ CL_BONUS_OBJ = $(CL_BONUS:.c=.o)
 all: $(SERVER) $(CLIENT)
 
 bonus : $(SERVER_BONUS) $(CLIENT_BONUS)
+
 $(UTILS):
 		$(MAKE) -C ./ultims
 $(SERVER): $(SV_OBJ) $(UTILS)
@@ -38,15 +39,14 @@ $(CLIENT_BONUS): $(CL_BONUS_OBJ) $(UTILS)
 		$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-		$(MAKE) clean -C ./ultims
+		$(MAKE) -C ./ultims clean
 		$(RM) $(SV_OBJ) $(CL_OBJ)
 		$(RM) $(SV_BONUS_OBJ) $(CL_BONUS_OBJ)
 
 fclean: clean
-		$(MAKE) fclean -C ./utils
+		$(MAKE) -C ./ultims fclean
 		$(RM) $(SERVER) $(CLIENT)
 		$(RM) $(CLIENT_BONUS) $(SERVER_BONUS)
 
 re: fclean all
 
-bonus: $(SERVER_BONUS) $(CLIENT_BONUS)
